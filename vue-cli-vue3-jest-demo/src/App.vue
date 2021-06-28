@@ -1,6 +1,6 @@
 <template>
   <login v-if="!isLoginSuccessful" @onSuccess="onSuccessfulLogin"></login>
-  <dashboard v-if="isLoginSuccessful" :email="email"/>
+  <dashboard v-if="isLoginSuccessful" :email="email" />
 
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -20,7 +20,8 @@ export default {
   },
   data() {
     return {
-      isLoginSuccessful: false
+      isLoginSuccessful: false,
+      email: ""
     }
   },
   methods: {
