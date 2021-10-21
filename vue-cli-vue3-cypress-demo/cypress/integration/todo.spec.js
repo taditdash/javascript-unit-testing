@@ -2,7 +2,7 @@
 
 describe('Todo.vue', () => {
   beforeEach(function() {
-    cy.visit('http://localhost:8080/ ')
+    cy.visit('http://localhost:8080/')
   });
 
   it('displays an error while adding a todo if todo title is having whitespace', () => {
@@ -12,7 +12,6 @@ describe('Todo.vue', () => {
     cy.get('button[data-cy=addTodo]')
       .click();
 
-    //cy.get('div[data-cy=todos]').should('have.length', 2);
     cy.document().contains('Please add a title for the todo.')
   })
 
